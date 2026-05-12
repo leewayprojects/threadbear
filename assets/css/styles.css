@@ -23,7 +23,7 @@ section {
   padding: 80px 10%;
 }
 
-h1,h2 {
+h1, h2 {
   font-family: "Brittany Signature", cursive;
   font-size: 2.4rem;
   color: black;
@@ -54,14 +54,17 @@ p {
   max-width: 700px;
 }
 
-/* HERO SECTION */
+/* ========================
+   HERO SECTION
+   ======================== */
+
 .hero {
-  height: 100vh;
+  min-height: 100vh;
   background-color: #f0ece3;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 15px;
+  padding: 40px 15px;
   position: relative;
   overflow: hidden;
 }
@@ -72,10 +75,13 @@ p {
   max-width: 75%;
   object-fit: contain;
   flex-shrink: 0;
-  transform: translateX(-120px);
+  transform: translateX(-120px); /* desktop offset */
 }
 
-/* NAVIGATION */
+/* ========================
+   NAVIGATION
+   ======================== */
+
 .main-nav {
   display: flex;
   flex-direction: column;
@@ -108,36 +114,9 @@ p {
   width: 100%;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 15px;
-  }
-
-  .hero-image {
-    height: 60vh;
-    width: 100%;
-    object-fit: contain;
-  }
-
-  .main-nav {
-    position: static;
-    transform: none;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 16px;
-    margin-top: 20px;
-  }
-
-  .main-nav a {
-    font-size: 1rem;
-  }
-}
-
-/* SECTION STYLES */
+/* ========================
+   SECTION STYLES
+   ======================== */
 
 .light {
   background: #ffffff;
@@ -147,7 +126,9 @@ p {
   background: #ece7df;
 }
 
-/* SERVICES */
+/* ========================
+   SERVICES
+   ======================== */
 
 .services-grid {
   display: grid;
@@ -162,7 +143,9 @@ p {
   border-radius: 8px;
 }
 
-/* GALLERY */
+/* ========================
+   GALLERY
+   ======================== */
 
 .gallery {
   display: grid;
@@ -177,39 +160,35 @@ p {
   border-radius: 8px;
 }
 
-/* CONTACT */
+/* ========================
+   CONTACT
+   ======================== */
 
 .contact a {
   color: black;
   text-decoration: none;
 }
 
-/* ======================
+/* ========================
    TO TOP BUTTON
-   ====================== */
+   ======================== */
 
 .to-top {
   position: fixed;
   bottom: 1.5rem;
   right: 1.5rem;
-
   width: 56px;
   height: 56px;
-
   border-radius: 999px;
-  background: transparent;   
+  background: transparent;
   border: none;
-
   color: #e6007a;
   font-size: 1.25rem;
   font-weight: 600;
   cursor: pointer;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
-
   opacity: 0;
   pointer-events: none;
   transform: translateY(8px);
@@ -223,25 +202,26 @@ p {
 }
 
 .to-top:hover svg polygon {
-  fill: #cc0066; /* slightly darker pink on hover */
+  fill: #cc0066;
 }
 
 .to-top:hover svg {
   transform: translateY(-2px);
-  transition: transform 0.2s ease;
 }
 
-/* Visible state */
 .to-top.show {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
 }
 
-/* Hover (subtle, not jumpy) */
 .to-top:hover {
   background-color: #f5f5f5;
 }
+
+/* ========================
+   FOOTER
+   ======================== */
 
 footer {
   text-align: center;
@@ -250,12 +230,124 @@ footer {
   color: white;
 }
 
+/* ========================
+   RESPONSIVE — TABLET
+   ======================== */
+
+@media (max-width: 900px) {
+  .hero-image {
+    max-width: 55%;
+    transform: translateX(-60px);
+  }
+
+  .main-nav {
+    gap: 22px;
+  }
+
+  .main-nav a {
+    font-size: 1.8rem;
+  }
+}
+
+/* ========================
+   RESPONSIVE — MOBILE
+   ======================== */
+
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.5rem;
+  /* Hero: stack vertically, remove the desktop offset */
+  .hero {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px 40px;
+    min-height: 100svh; /* safer on mobile browsers */
+  }
+
+  .hero-image {
+    height: auto;
+    width: 85%;
+    max-width: 340px;
+    transform: none; /* remove the translateX that breaks mobile layout */
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+
+  /* Nav: horizontal, centred, wrapping */
+  .main-nav {
+    position: static;
+    transform: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 20px;
+    padding-right: 0;
+    margin-top: 24px;
+    width: 100%;
+  }
+
+  .main-nav a {
+    font-size: 1.4rem;
+  }
+
+  /* Section padding */
+  section {
+    padding: 50px 6%;
+  }
+
+  /* Headings */
+  h1, h2 {
+    font-size: 1.9rem;
+  }
+
+  /* Services: single column on very small screens */
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Gallery: single column */
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  /* Prevent long email address from overflowing */
+  .contact a {
+    word-break: break-all;
+  }
+
+  /* Shrink to-top button slightly on mobile */
+  .to-top {
+    width: 44px;
+    height: 44px;
+    bottom: 1rem;
+    right: 1rem;
+  }
+
+  .to-top svg {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+/* ========================
+   RESPONSIVE — SMALL MOBILE
+   ======================== */
+
+@media (max-width: 400px) {
+  .hero-image {
+    width: 95%;
+    max-width: 280px;
+  }
+
+  .main-nav a {
+    font-size: 1.2rem;
+  }
+
+  h1, h2 {
+    font-size: 1.6rem;
   }
 
   section {
-    padding: 60px 8%;
+    padding: 40px 5%;
   }
 }
