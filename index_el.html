@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="el">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ThreadBear Atelier</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <style>
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+      }
+    </style>
+
+    <!-- HTML for language switcher -->
+    <nav class="lang-switcher" aria-label="Γλώσσα">
+      <a href="index.html" lang="en">EN</a>
+      <span class="lang-switcher__divider" aria-hidden="true"></span>
+      <a href="index_el.html" class="active" lang="el" aria-current="page"
+        >ΕΛ</a
+      >
+    </nav>
+  </head>
+
+  <body>
+    <!-- HERO -->
+    <section class="hero">
+      <img
+        src="/assets/img/ThreadBear-Atelier.png"
+        alt="ThreadBear Atelier"
+        class="hero-image"
+      />
+
+      <nav class="main-nav">
+        <a href="#repairs">Επιδιορθώσεις & Μεταποιήσεις</a>
+        <a href="#tailoring">Ραπτική & Σχεδιασμός</a>
+        <!--<a href="#gallery">Gallery</a>-->
+        <a href="#contact">Επικοινωνία</a>
+      </nav>
+    </section>
+
+    <!-- REPAIRS & ALTERATIONS -->
+    <section id="repairs" class="light">
+      <h2>Επιδιορθώσεις &amp; Μεταποιήσεις</h2>
+
+      <div class="price-list">
+        <div class="price-group">
+          <div class="price-group__header">
+            <span>Καθημερινές επιδιορθώσεις</span>
+            <span>Ενδεικτική τιμή</span>
+          </div>
+
+          <div class="price-row">
+            <span class="price-row__name">Επισκευή ραφής</span>
+            <span class="price-row__val">€3–10</span>
+          </div>
+
+          <div class="price-row">
+            <span class="price-row__name"
+              >Επισκευή μικρού σκισίματος / μπάλωμα</span
+            >
+            <span class="price-row__val">€5–15</span>
+          </div>
+
+          <div class="price-row">
+            <span class="price-row__name"
+              >Ενίσχυση denim (γόνατο ή καβάλος)</span
+            >
+            <span class="price-row__val">€10–25</span>
+          </div>
+
+          <div class="price-row">
+            <span class="price-row__name">Αντικατάσταση λάστιχου</span>
+            <span class="price-row__val">€8–18</span>
+          </div>
+
+          <div class="price-row">
+            <span class="price-row__name">
+              Πακέτο μικροεπισκευών
+              <span class="price-row__sub">
+                Μπορεί να περιλαμβάνει επισκευές ραφών, αντικατάσταση κουμπιών ή
+                μικρές προσαρμογές σε μία επίσκεψη
+              </span>
+            </span>
+
+            <span class="price-row__val">€8–20</span>
+          </div>
+        </div>
+
+        <div class="price-group">
+          <div class="price-group__header">
+            <span>Κουμπιά &amp; Κουμπώματα</span>
+            <span>Ενδεικτική τιμή</span>
+          </div>
+
+          <div class="price-row">
+            <span class="price-row__name"
+              >Αντικατάσταση κουμπιού (δικά σας κουμπιά)</span
+            >
+            <span class="price-row__val">€2–5 το καθένα</span>
+          </div>
+
+          <div class="price-row">
+            <span class="price-row__name"
+              >Αντικατάσταση κουμπιού (κουμπιά του εργαστηρίου)</span
+            >
+            <span class="price-row__val">€3–8 το καθένα</span>
+          </div>
+
+          <div class="price-row">
+            <span class="price-row__name">
+              Αντικατάσταση φερμουάρ
+              <span class="price-row__sub">
+                Παντελόνια / chinos €8–15 · Φούστες &amp; φορέματα €10–20 ·
+                Κρυφό φερμουάρ ή φόδρα €15–30
+              </span>
+            </span>
+
+            <span class="price-row__val">€8–30</span>
+          </div>
+        </div>
+
+        <div class="price-group">
+          <div class="price-group__header">
+            <span>Κοντέματα & Τελειώματα</span>
+            <span>Ενδεικτική τιμή</span>
+          </div>
+
+          <div class="price-row">
+            <span class="price-row__name">Απλό κόντεμα παντελονιού</span>
+            <span class="price-row__val">€6–12</span>
+          </div>
+
+          <div class="price-row">
+            <span class="price-row__name"
+              >Κόντεμα jeans (διατήρηση αυθεντικού τελειώματος)</span
+            >
+            <span class="price-row__val">€10–18</span>
+          </div>
+
+          <div class="price-row">
+            <span class="price-row__name"
+              >Χειροποίητο / αόρατο τελείωμα</span
+            >
+            <span class="price-row__val">€12–20</span>
+          </div>
+
+          <div class="price-row">
+            <span class="price-row__name"
+              >Μικρή επισκευή τελειώματος / ξαναράψιμο</span
+            >
+            <span class="price-row__val">€8–18</span>
+          </div>
+
+          <div class="price-row">
+            <span class="price-row__name">Κόντεμα φούστας ή φορέματος</span>
+            <span class="price-row__val">€8–15</span>
+          </div>
+
+          <div class="price-row">
+            <span class="price-row__name"
+              >Ρούχα με φόδρα ή ευαίσθητα υφάσματα</span
+            >
+            <span class="price-row__val">€15–25+</span>
+          </div>
+        </div>
+
+        <div class="price-notes">
+          <span
+            >Επισκευές αυθημερόν ή express: +€5 όπου είναι διαθέσιμο.</span
+          >
+
+          <span>
+            Οι τιμές είναι ενδεικτικές και μπορεί να διαφέρουν ανάλογα με το
+            ύφασμα, την κατασκευή και την πολυπλοκότητα της εργασίας.
+          </span>
+
+          <span>
+            Εξειδικευμένες εργασίες σε denim, ευαίσθητα υφάσματα ή εκτεταμένες
+            επιδιορθώσεις μπορεί να απαιτούν εκτίμηση από κοντά.
+          </span>
+
+          <span>
+            Η τελική τιμή επιβεβαιώνεται πάντα πριν ξεκινήσει η εργασία.
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAILORING & DESIGN -->
+    <section id="tailoring" class="dark">
+      <h2>Ραπτική &amp; Σχεδιασμός</h2>
+
+      <p>
+        Ραπτική χωρίς περιορισμούς φύλου, ρούχα στα μέτρα σας και συνεργατικός
+        σχεδιασμός προσαρμοσμένος στο σώμα, το στυλ και την καθημερινότητά σας.
+      </p>
+
+      <div class="services-grid">
+        <details class="service-card" name="services">
+          <summary class="service-card__trigger">
+            <span class="service-card__number">01</span>
+
+            <span class="service-card__name"
+              >Ραπτική Κατόπιν Παραγγελίας</span
+            >
+
+            <span class="service-card__tag">Ρούχα στα μέτρα σας</span>
+
+            <svg
+              class="service-card__chevron"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </summary>
+
+          <div class="service-card__body">
+            <p>
+              Ρούχα σχεδιασμένα και ραμμένα αποκλειστικά για εσάς, με βάση τις
+              μετρήσεις, την κίνηση και το προσωπικό σας στυλ. Από καθημερινά
+              βασικά κομμάτια έως πιο ιδιαίτερες δημιουργίες, κάθε project
+              εξελίσσεται μέσα από συζήτηση, πρόβες και προσεκτική κατασκευή.
+            </p>
+
+            <ul>
+              <li>
+                Παντελόνια, πουκάμισα, φούστες, σακάκια, φορέματα και custom
+                κομμάτια
+              </li>
+
+              <li>Πρόβες και προσαρμογές στα μέτρα σας</li>
+
+              <li>Καθοδήγηση σε υφάσματα και κατασκευή</li>
+
+              <li>Η τιμή διαμορφώνεται ανά project</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="service-card" name="services">
+          <summary class="service-card__trigger">
+            <span class="service-card__number">02</span>
+
+            <span class="service-card__name"
+              >Σχεδιασμός & Ανάπτυξη</span
+            >
+
+            <span class="service-card__tag">Πατρόν & δείγματα</span>
+
+            <svg
+              class="service-card__chevron"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </summary>
+
+          <div class="service-card__body">
+            <p>
+              Συνεργατική ανάπτυξη ενδυμάτων για προσωπικά projects, μικρές
+              συλλογές, performance wear ή μοναδικά σχέδια. Υποστήριξη από την
+              αρχική ιδέα έως τη δημιουργία πατρόν και δείγματος.
+            </p>
+
+            <ul>
+              <li>Κατασκευή πατρόν (απλό): €40–€90</li>
+              <li>Κατασκευή πατρόν (σύνθετο): €90–€180</li>
+              <li>Toile / δείγμα ενδύματος: από €50</li>
+              <li>Συμβουλευτική σχεδιασμού (1 ώρα): €25–€50</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="service-card" name="services">
+          <summary class="service-card__trigger">
+            <span class="service-card__number">03</span>
+
+            <span class="service-card__name">
+              Συμπεριληπτική & Προσαρμοστική Ραπτική
+            </span>
+
+            <span class="service-card__tag">
+              Προσαρμοσμένες λύσεις εφαρμογής
+            </span>
+
+            <svg
+              class="service-card__chevron"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </summary>
+
+          <div class="service-card__body">
+            <p>
+              Ραπτική και μεταποιήσεις με έμφαση στην άνεση, την προσβασιμότητα,
+              τη διαφορετικότητα σωμάτων και την προσωπική έκφραση. Το atelier
+              προσφέρει μια συνεργατική και υποστηρικτική προσέγγιση,
+              προσαρμοσμένη στις ανάγκες κάθε ατόμου και όχι στα παραδοσιακά
+              πρότυπα μεγεθών.
+            </p>
+
+            <ul>
+              <li>
+                Προσαρμοστικές μεταποιήσεις εφαρμογής: +€10–€40 ανάλογα με την
+                πολυπλοκότητα
+              </li>
+
+              <li>
+                Μεταποιήσεις φιλικές προς binders και προσανατολισμένες στην
+                άνεση
+              </li>
+
+              <li>Προσαρμογές κινητικότητας και προσβασιμότητας</li>
+
+              <li>Η τιμή καθορίζεται ανά ρούχο</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="light contact">
+      <h2>Επικοινωνία</h2>
+
+      <p>
+        <a href="mailto:repairs@threadbear.org"
+          >repairs@threadbear.org</a
+        >
+      </p>
+
+      <p>Ίμβρου 34-36, Κυψέλη, Αθήνα 11362</p>
+    </section>
+
+    <footer>
+      <p>&copy; ThreadBear Atelier</p>
+    </footer>
+
+    <button
+      id="to-top"
+      class="to-top"
+      type="button"
+      aria-label="Επιστροφή στην κορυφή"
+    >
+      <svg
+        viewBox="0 0 48 48"
+        width="20"
+        height="20"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <polygon points="24 8 40 40 8 40" fill="#e6007a" />
+      </svg>
+    </button>
+
+    <script src="/assets/js/script.js"></script>
+  </body>
+</html>

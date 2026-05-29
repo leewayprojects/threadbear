@@ -8,6 +8,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "DidactGothic-Regular";
+  src: url("/assets/fonts/DidactGothic-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --teal: #5badb3;
   --teal-light: #edf6f7;
@@ -68,6 +76,15 @@ h2:hover::after {
   width: 100%;
 }
 
+/* Greek headings only */
+html[lang="el"] h1,
+html[lang="el"] h2,
+html[lang="el"] .main-nav a {
+  font-family: "DidactGothic-Regular", serif;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+}
+
 h3 {
   font-size: 0.75rem;
   font-weight: 500;
@@ -86,6 +103,7 @@ p {
 ul ul {
   padding-left: 2rem;
 }
+
 
 /* ========================
    HERO
@@ -149,6 +167,62 @@ ul ul {
 
 .main-nav a:hover::after {
   width: 100%;
+}
+
+/* ========================
+   LANGUAGE SWITCHER
+   ======================== */
+
+.lang-switcher {
+  display: inline-flex;
+  align-items: center;
+  position: absolute;
+  top: 14px;
+  right: 20px;
+  z-index: 1000;
+  border: 1px solid rgba(230, 0, 122, 0.35);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.lang-switcher a {
+  display: block;
+  padding: 6px 13px;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  color: #e6007a;
+  background: transparent;
+  transition: background 0.15s, color 0.15s;
+  line-height: 1;
+}
+
+.lang-switcher a.active {
+  background: #e6007a;
+  color: #fff;
+}
+
+.lang-switcher a:hover:not(.active) {
+  background: rgba(230, 0, 122, 0.08);
+}
+
+.lang-switcher__divider {
+  display: block;
+  width: 1px;
+  align-self: stretch;
+  background: rgba(230, 0, 122, 0.35);
+  flex-shrink: 0;
+}
+
+@media (max-width: 641px) {
+  .lang-switcher {
+    top: 10px;
+    right: 12px;
+  }
+  .lang-switcher a {
+    padding: 7px 11px;
+    font-size: 12px;
+  }
 }
 
 /* ========================
@@ -630,3 +704,5 @@ footer {
     padding: 40px 5%;
   }
 }
+
+
