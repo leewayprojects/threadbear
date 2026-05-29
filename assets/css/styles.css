@@ -9,8 +9,8 @@
 }
 
 @font-face {
-  font-family: "DidactGothic-Regular";
-  src: url("/assets/fonts/DidactGothic-Regular.ttf") format("truetype");
+  font-family: "AlegreyaSans-MediumItalic";
+  src: url("/assets/fonts/AlegreyaSans-MediumItalic.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -80,7 +80,8 @@ h2:hover::after {
 html[lang="el"] h1,
 html[lang="el"] h2,
 html[lang="el"] .main-nav a {
-  font-family: "DidactGothic-Regular", serif;
+  font-family: "AlegreyaSans-MediumItalic", serif;
+  font-size: 2.4rem;
   letter-spacing: 0.02em;
   line-height: 1.1;
 }
