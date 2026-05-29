@@ -175,7 +175,7 @@ ul ul {
 
 .lang-switcher {
   display: inline-flex;
-  align-items: center;
+  align-items: stretch;        /* was missing — makes divider full height in Firefox */
   position: absolute;
   top: 14px;
   right: 20px;
@@ -183,10 +183,13 @@ ul ul {
   border: 1px solid rgba(230, 0, 122, 0.35);
   border-radius: 4px;
   overflow: hidden;
+  -webkit-overflow: hidden;    /* Safari */
+  isolation: isolate;          /* forces a new stacking context — fixes Firefox clipping */
 }
 
 .lang-switcher a {
-  display: block;
+  display: flex;
+  align-items: center;
   padding: 6px 13px;
   font-size: 13px;
   letter-spacing: 0.04em;
@@ -195,6 +198,7 @@ ul ul {
   background: transparent;
   transition: background 0.15s, color 0.15s;
   line-height: 1;
+  -webkit-font-smoothing: antialiased;
 }
 
 .lang-switcher a.active {
