@@ -651,6 +651,8 @@ footer {
   .main-nav {
     flex-direction: column;    /* override the row/wrap back to stacked */
     align-items: center;       /* centre each link horizontally */
+    position: static;
+    transform: none;
     gap: 10px;
     margin-top: 24px;
     width: 100%;
