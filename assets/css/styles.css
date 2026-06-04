@@ -606,7 +606,7 @@ footer {
   }
 
   .main-nav {
-    gap: 22px;
+    gap: 16px;
   }
 
   .main-nav a {
@@ -649,13 +649,9 @@ footer {
   }
 
   .main-nav {
-    position: static;
-    transform: none;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px 20px;
-    padding-right: 0;
+    flex-direction: column;    /* override the row/wrap back to stacked */
+    align-items: center;       /* centre each link horizontally */
+    gap: 10px;
     margin-top: 24px;
     width: 100%;
   }
