@@ -105,6 +105,29 @@ ul ul {
   padding-left: 2rem;
 }
 
+/* ========================
+   TYPOGRAPHY — BASE
+   ======================== */
+
+h3 {
+  font-size: 0.8rem;        /* was 0.75rem — too small relative to body */
+  font-weight: 500;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+/* Greek headings — base */
+html[lang="el"] h1,
+html[lang="el"] h2,
+html[lang="el"] .main-nav a {
+  font-family: "AlegreyaSans-MediumItalic", serif;
+  font-size: 2.2rem;        /* was 2.4rem — Alegreya reads optically larger */
+  letter-spacing: 0.02em;
+  line-height: 1.15;        /* was 1.1 — slightly more breathing room */
+}
+
 
 /* ========================
    HERO
@@ -577,6 +600,11 @@ footer {
     transform: translateX(-60px);
   }
 
+    /* Greek nav at tablet */
+  html[lang="el"] .main-nav a {
+    font-size: 1.65rem;
+  }
+
   .main-nav {
     gap: 22px;
   }
@@ -641,7 +669,19 @@ footer {
   }
 
   h1, h2 {
+    font-size: 2.2rem;
+  }
+
+
+  /* Greek headings at mobile */
+  html[lang="el"] h1,
+  html[lang="el"] h2 {
     font-size: 2rem;
+  }
+
+  /* Greek nav at mobile */
+  html[lang="el"] .main-nav a {
+    font-size: 1.3rem;
   }
 
   .price-list {
@@ -706,11 +746,22 @@ footer {
   }
 
   h1, h2 {
-    font-size: 1.7rem;
+    font-size: 1.85rem;
   }
 
   section {
     padding: 40px 5%;
+  }
+
+  /* Greek headings at small mobile */
+  html[lang="el"] h1,
+  html[lang="el"] h2 {
+    font-size: 1.7rem;
+  }
+
+  /* Greek nav at small mobile */
+  html[lang="el"] .main-nav a {
+    font-size: 1.1rem;
   }
 }
 
