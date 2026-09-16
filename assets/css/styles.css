@@ -531,6 +531,24 @@ details[open] .service-card__tag {
   color: var(--teal);
 }
 
+.contact-hours h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.contact-hours p {
+  margin: 0 0 0.15rem;
+}
+
+.instagram-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  vertical-align: middle;
+  margin-right: 0.4rem;
+  
+}
+
 /* ========================
    TO TOP BUTTON
    ======================== */
