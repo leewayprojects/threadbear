@@ -519,6 +519,67 @@ details[open] .service-card__tag {
    CONTACT
    ======================== */
 
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.95fr) minmax(240px, 1fr) minmax(260px, 0.95fr);
+  gap: clamp(28px, 4vw, 56px);
+  align-items: start;
+  margin-top: 16px;
+}
+
+.contact-info,
+.contact-location {
+  min-width: 0;
+}
+
+.contact-instagram {
+  margin-top: 0.75rem;
+}
+
+.contact-map {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  min-height: 190px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  transform: translateX(-8px);
+}
+
+.contact-map iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.contact-address {
+  margin-top: 0.9rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.review-card {
+  border: 1px solid var(--border);
+  padding: 30px 32px;
+}
+
+.review-card h3 {
+  margin-bottom: 1rem;
+  color: var(--ink);
+  line-height: 1.55;
+}
+
+.review-card p {
+  margin-bottom: 1.25rem;
+  color: var(--muted);
+}
+
+.review-card a {
+  display: inline-block;
+  font-weight: 400;
+  word-break: normal;
+}
+
 .contact a {
   color: var(--ink);
   text-decoration: none;
@@ -644,6 +705,16 @@ footer {
   .gallery img:nth-child(n+6) { grid-column: span 3; }
 }
 
+@media (max-width: 980px) and (min-width: 769px) {
+  .contact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .review-card {
+    grid-column: 1 / -1;
+  }
+}
+
 /* ========================
    RESPONSIVE — MOBILE
    ======================== */
@@ -730,8 +801,18 @@ footer {
     padding-left: 0;
   }
 
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .review-card {
+    padding: 24px;
+  }
+
   .contact a {
-    word-break: break-all;
+    overflow-wrap: anywhere;
+    word-break: normal;
   }
 
   .to-top {
@@ -1060,4 +1141,17 @@ footer {
   }
 }
 
+/* Centre the Repairs & Alterations content */
+#repairs > * {
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+#repairs h2 {
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
